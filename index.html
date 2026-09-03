@@ -86,6 +86,7 @@
   ::selection{ background:var(--gold-soft); }
 
   .wrap{ max-width:1180px; margin:0 auto; padding:0 clamp(1.25rem, 4vw, 3rem); }
+  .hero .wrap, .topbar .wrap{ max-width:1320px; }
   section{ padding:clamp(3.5rem,8vw,7rem) 0; }
 
   /* Scroll progress bar */
@@ -95,6 +96,9 @@
   .topbar{ padding:1.4rem 0 0; }
   .topbar .wrap{ display:flex; justify-content:space-between; align-items:flex-start; gap:1rem; }
   .topbar .brand-name{ font-family:"Fraunces"; font-weight:600; font-size:1.05rem; display:flex; align-items:center; gap:0.6rem; }
+  .logotype{ display:flex; flex-direction:column; line-height:1.05; }
+  .logotype strong{ font-family:"Fraunces"; font-weight:700; font-size:1.12rem; letter-spacing:-0.01em; color:var(--ink); font-style:normal; }
+  .logotype em{ font-family:"JetBrains Mono", ui-monospace, monospace; font-style:normal; font-weight:500; font-size:0.62rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); }
   .topbar .tagline{ max-width:340px; text-align:right; font-size:0.78rem; color:var(--steel); display:flex; align-items:center; gap:0.7rem; }
   .theme-toggle{
     width:34px; height:34px; border-radius:50%; border:1px solid var(--line); background:var(--surface);
@@ -322,8 +326,8 @@
 <div class="topbar">
   <div class="wrap">
     <span class="brand-name">
-      <svg width="22" height="22" viewBox="0 0 30 30"><rect x="1" y="1" width="28" height="28" rx="7" fill="var(--ink)"/><path d="M9 20 L15 9 L21 20" stroke="var(--gold)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" fill="none"/></svg>
-      Ajay Builds Sites
+      <svg width="26" height="26" viewBox="0 0 30 30"><rect x="1" y="1" width="28" height="28" rx="7" fill="var(--ink)"/><path d="M9 20 L15 9 L21 20" stroke="var(--gold)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" fill="none"/></svg>
+      <span class="logotype"><strong>Barcode's</strong><em>Web Builds</em></span>
     </span>
     <span class="tagline">
       Full-stack developer &amp; AI engineer, building fast websites and generative AI features for growing businesses.
