@@ -14,7 +14,7 @@
 <meta name="twitter:title" content="Ajay R | Full-Stack &amp; Gen AI Developer">
 <meta name="twitter:description" content="Full-Stack Developer &amp; AI Engineer building websites, business systems, and practical AI solutions.">
 <meta name="twitter:image" content="https://ajayabi-code.github.io/portfolio/assets/ajay.jpg">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Crect width='30' height='30' rx='7' fill='%2312181F'/%3E%3Cpath d='M9 20 L15 9 L21 20' stroke='%235B4FE0' stroke-width='2' fill='none' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Crect width='30' height='30' rx='7' fill='%2312181F'/%3E%3Cpath d='M9 20 L15 9 L21 20' stroke='%23C58A32' stroke-width='2' fill='none' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.16.0/devicon.min.css">
 <script type="application/ld+json">
 {
@@ -33,31 +33,35 @@
   @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..900&family=Fraunces:ital,opsz,wght@1,9..144,400..600&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
   :root{
-    --bg:#FAF9F5;
+    --bg:#F7F5EF;
     --surface:#FFFFFF;
-    --surface-alt:#F1EEE4;
+    --surface-alt:#F1ECDD;
     --ink:#12181F;
-    --steel:#5E6B76;
-    --gold:#5B4FE0;
-    --gold-bright:#7A70E8;
-    --gold-soft: rgba(91,79,224,0.10);
-    --line: rgba(18,24,31,0.13);
+    --steel:#65717C;
+    --gold:#C58A32;
+    --gold-bright:#A96F20;
+    --gold-soft: rgba(197,138,50,0.12);
+    --line: #DDD9CE;
+    --success:#2E9D70;
+    --success-soft: rgba(46,157,112,0.14);
     --shadow: 0 1px 2px rgba(18,24,31,0.06), 0 12px 32px -16px rgba(18,24,31,0.18);
     --shadow-lg: 0 24px 60px -20px rgba(18,24,31,0.28);
-    --contrast-bg:#12181F;
-    --contrast-fg:#F2EFE6;
+    --contrast-bg:#121820;
+    --contrast-fg:#F5F2E9;
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
-      --bg:#0A0E13; --surface:#12181F; --surface-alt:#171F27; --ink:#F2EFE6; --steel:#93A6B4;
-      --gold:#A79BFF; --gold-bright:#C3BBFF; --gold-soft: rgba(167,155,255,0.14); --line: rgba(242,239,230,0.12);
+      --bg:#090D12; --surface:#121820; --surface-alt:#161D25; --ink:#F5F2E9; --steel:#9CAAB5;
+      --gold:#E2B866; --gold-bright:#F0CA7C; --gold-soft: rgba(226,184,102,0.16); --line: #29323C;
+      --success:#55C996; --success-soft: rgba(85,201,150,0.18);
       --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 20px 44px -18px rgba(0,0,0,0.55);
       --shadow-lg: 0 30px 70px -20px rgba(0,0,0,0.6);
     }
   }
   :root[data-theme="dark"]{
-    --bg:#0A0E13; --surface:#12181F; --surface-alt:#171F27; --ink:#F2EFE6; --steel:#93A6B4;
-    --gold:#A79BFF; --gold-bright:#C3BBFF; --gold-soft: rgba(167,155,255,0.14); --line: rgba(242,239,230,0.12);
+    --bg:#090D12; --surface:#121820; --surface-alt:#161D25; --ink:#F5F2E9; --steel:#9CAAB5;
+    --gold:#E2B866; --gold-bright:#F0CA7C; --gold-soft: rgba(226,184,102,0.16); --line: #29323C;
+    --success:#55C996; --success-soft: rgba(85,201,150,0.18);
     --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 20px 44px -18px rgba(0,0,0,0.55);
     --shadow-lg: 0 30px 70px -20px rgba(0,0,0,0.6);
   }
@@ -121,12 +125,12 @@
     display:inline-flex; align-items:center; gap:0.5rem; border-radius:8px;
     transition:transform 0.18s ease, box-shadow 0.18s ease, background 0.15s ease; border:1px solid transparent;
   }
-  .btn.primary{ background:var(--ink); color:var(--bg); box-shadow:var(--shadow); }
-  .btn.primary:hover{ box-shadow:var(--shadow-lg); }
+  .btn.primary{ background:var(--gold); color:var(--contrast-bg); box-shadow:var(--shadow); }
+  .btn.primary:hover{ background:var(--gold-bright); box-shadow:var(--shadow-lg); }
   .btn.ghost{ border-color:var(--line); color:var(--ink); }
   .btn.ghost:hover{ border-color:var(--gold); color:var(--gold); }
   .btn:focus-visible{ outline:2px solid var(--gold); outline-offset:2px; }
-  .btn.gold{ background:var(--gold); color:var(--bg); box-shadow:var(--shadow); }
+  .btn.gold{ background:var(--gold); color:var(--contrast-bg); box-shadow:var(--shadow); }
   .btn.gold:hover{ background:var(--gold-bright); }
   .btn.whatsapp{ background:#25D366; color:#06210F; }
   .btn.whatsapp:hover{ background:#2FE374; }
@@ -141,12 +145,17 @@
     opacity:0.5;
   }
   .hero .wrap{ position:relative; z-index:1; }
-  .hero-grid{ display:grid; grid-template-columns:1.05fr 0.95fr; gap:clamp(2rem,5vw,4rem); align-items:center; }
+  .device-glow{
+    position:absolute; width:60%; aspect-ratio:1; right:-8%; top:8%; z-index:0;
+    background:radial-gradient(circle, var(--gold-soft), transparent 70%);
+    filter:blur(10px); pointer-events:none;
+  }
+  .hero-grid{ display:grid; grid-template-columns:1.05fr 0.95fr; gap:clamp(2rem,5vw,4rem); align-items:center; position:relative; }
   @media (max-width:900px){ .hero-grid{ grid-template-columns:1fr; } }
   .avatar-row{ display:flex; align-items:center; gap:1rem; margin-bottom:1.6rem; }
   .avatar{ width:64px; height:64px; border-radius:50%; object-fit:cover; border:2px solid var(--gold); }
   .status-line{ display:flex; align-items:center; gap:0.5rem; font-size:0.85rem; color:var(--steel); }
-  .status-dot{ width:8px; height:8px; border-radius:50%; background:#3EBD6B; box-shadow:0 0 0 3px rgba(62,189,107,0.2); flex:none; }
+  .status-dot{ width:8px; height:8px; border-radius:50%; background:var(--success); box-shadow:0 0 0 3px var(--success-soft); flex:none; }
   .hero h1{ font-size:clamp(2.4rem,5.6vw,4.2rem); line-height:1.04; }
   .hero .sub{ font-size:1.1rem; color:var(--steel); max-width:50ch; margin-top:1.3rem; }
   .cta-row{ display:flex; gap:0.9rem; flex-wrap:wrap; margin-top:2rem; }
@@ -327,6 +336,7 @@
   <div class="hero-bg"></div>
   <div class="wrap">
     <div class="hero-grid">
+      <div class="device-glow" aria-hidden="true"></div>
       <div>
         <div class="avatar-row" data-reveal>
           <img class="avatar" src="assets/ajay.jpg" alt="Photo of Ajay R" width="64" height="64">
